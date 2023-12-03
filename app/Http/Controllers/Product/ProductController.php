@@ -13,10 +13,6 @@ class ProductController extends Controller
 {
     function index() {
     	$products = Product::all();
-
-    	// foreach (Storage::disk("public")->files() as $file) {
-    	// 	dump($file);
-    	// }
     	return view('products.index', compact('products'));
     }
 

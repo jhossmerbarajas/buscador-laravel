@@ -16,9 +16,13 @@ return new class extends Migration
 
             $table->string("name", 50);
             $table->string("description", 150);
+            // $table->decimal("price", 8, 2);
             $table->string("url_img");
 
-            $table->timestamps();
+            $table->unsignedBigInteger("category_id")->nullable();
+            $table->foreign("category_id")->references("id")->on("categories")->onDelete("set null");
+
+            // $table->timestamps();
         });
     }
 
