@@ -12,11 +12,12 @@
 </head>
 <body>
 
-	<main class="container">
+	{{-- HEADER --}}
+	@include('layouts.partials.header')
+	
+	<main class="container-fluid">
 		<section class="row">
 			
-			{{-- HEADER --}}
-			@include('layouts.partials.header')
 
 			{{-- CONTENT --}}
 			@yield('content')

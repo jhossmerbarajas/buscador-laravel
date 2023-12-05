@@ -8,9 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
+
+    protected $fillable = ["category"];
+
     public $timestamps = false;
 
     function products() {
-    	return $this->hasMant("App\Models\Product");
+    	return $this->hasMany("App\Models\Product");
     }
 }

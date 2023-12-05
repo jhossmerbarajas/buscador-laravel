@@ -3,31 +3,31 @@
 
 @section('content')
   
-
-  <a href="{{ route('product.create') }}" class="btn btn-primary my-2 col-sm-2">Create Product</a>
-
+            {{-- <img src="{{ asset(Storage::url($product->url_img)) }}" alt=""> --}}
+    <h3 class="my-3"> {{ $category }}</h3>
   <div class="album py-5 bg-light">
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
-        @foreach($products as $product)
+        @foreach($categories as $category)
+    
             <div class="col">
               <div class="card shadow-sm">
-               
-                <img src="{{ asset(Storage::url($product->url_img)) }}"  class="bd-placeholder-img card-img-top" width="100%" height="225" role="img">
+                
+                 <img src="{{ asset(Storage::url($category->url_img)) }}"  class="bd-placeholder-img card-img-top" width="100%" height="225" role="img">
 
                 <div class="card-body">
-                    <h2> {{ $product->name }} </h2>
+                    <h2> {{ $category->name }} </h2>
                   <p class="card-text">
-                      {{ $product->description }}
+                      {{ $category->description }}
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                        <a href="{{ route('product.show', $product->id) }}" type="button" class="btn btn-sm btn-outline-secondary"> 
-                            View 
+                        <a href="{{ route('product.index') }}" type="button" class="btn btn-sm btn-outline-secondary"> 
+                            Products 
                         </a>
-                        <a href="{{ route('category.show', $product->category) }}" type="button" class="btn btn-sm btn-outline-secondary">
-                            {{ $product->category }}
+                        <a href="{{ route('category.index') }}" type="button" class="btn btn-sm btn-outline-secondary">
+                            Categories
                         </a>
                     </div>
                     <small class="text-muted">9 mins</small>

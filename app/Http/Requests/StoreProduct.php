@@ -24,6 +24,7 @@ class StoreProduct extends FormRequest
         return [
             "name" => "required",
             "description" => "required",
+            "category" => "required",
             "file" => "required|image"
         ];
     }
