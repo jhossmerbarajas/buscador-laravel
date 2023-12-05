@@ -15,13 +15,13 @@
 
 <ol>
 	<li>
-			1. Abre el archivo ```php.ini```
+			Abre el archivo **php.ini**
 	</li>
 	<li>
-			2. Descomenta ```upload_tmp_dir```
+			Descomenta **upload_tmp_dir**
 	</li>
 	<li>
-			3. Asignale ```C:/laragon/tmp```		
+			Asignale **C:/laragon/tmp**		
 	</li>
 </ol>
 
