@@ -10,9 +10,10 @@ use App\Models\Product;
 class SearchController extends Controller
 {
     function search(Request $req) {
-    	$param = $req->validate([ "search" => "required" ]);
-
-    	$search = Product::where("name", "LIKE", "%{$param}%")->get();
-    	return view("search.show", compact('search'));
+    	$req->validate([ "search" => "required" ]);
+    	$param = $req->input("search");
+    	$searchs = Product::where("name", "LIKE", "%{$param}%")->get();
+    	
+    	return view("search.show", compact('searchs'));
     }
 }
