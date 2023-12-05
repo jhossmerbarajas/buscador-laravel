@@ -2,7 +2,7 @@
 
 <p> 
 	Este es un proyecto básico sobre un buscador. Puedes buscar por categorias o por proudctos. 
-	Cada **card** de productos, se listan la categoria a la que pertenece el producto, al darle click,
+	Cada *card* de productos, se listan la categoria a la que pertenece el producto, al darle click,
 	se mostrarán todos los productos de dicha categoría.
 </p>
 
@@ -15,13 +15,13 @@
 
 <ol>
 	<li>
-			Abre el archivo **php.ini**
+			Abre el archivo *php.ini*
 	</li>
 	<li>
-			Descomenta **upload_tmp_dir**
+			Descomenta *upload_tmp_dir*
 	</li>
 	<li>
-			Asignale **C:/laragon/tmp**		
+			Asignale *C:/laragon/tmp*		
 	</li>
 </ol>
 
